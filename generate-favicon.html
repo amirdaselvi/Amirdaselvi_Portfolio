@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Favicon Generator - Neon Glow A</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 40px;
+            background: #1a1a1a;
+            font-family: 'Arial', sans-serif;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 30px;
+        }
+        
+        h1 {
+            background: linear-gradient(135deg, #6A0DAD, #D946EF);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 10px;
+        }
+        
+        .canvas-container {
+            display: flex;
+            gap: 30px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        
+        .canvas-item {
+            text-align: center;
+        }
+        
+        canvas {
+            border: 2px solid #6A0DAD;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(106, 13, 173, 0.5);
+        }
+        
+        .download-btn {
+            background: linear-gradient(135deg, #6A0DAD, #D946EF);
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: bold;
+            margin-top: 10px;
+            transition: transform 0.3s ease;
+        }
+        
+        .download-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 5px 20px rgba(217, 70, 239, 0.4);
+        }
+        
+        .instructions {
+            background: rgba(106, 13, 173, 0.1);
+            border: 2px solid #6A0DAD;
+            border-radius: 10px;
+            padding: 20px;
+            max-width: 600px;
+            line-height: 1.8;
+        }
+        
+        .instructions h3 {
+            color: #D946EF;
+            margin-top: 0;
+        }
+        
+        .instructions ol {
+            padding-left: 20px;
+        }
+        
+        .instructions code {
+            background: rgba(217, 70, 239, 0.2);
+            padding: 2px 6px;
+            border-radius: 4px;
+            color: #D946EF;
+        }
+    </style>
+</head>
+<body>
+    <h1>🎨 Neon Glow Favicon Generator</h1>
+    <p style="color: #b8b8b8;">Your custom "A" favicon with purple neon glow effect</p>
+    
+    <div class="canvas-container">
+        <div class="canvas-item">
+            <p>SVG (Scalable)</p>
+            <canvas id="canvas-svg" width="256" height="256"></canvas>
+            <br>
+            <button class="download-btn" onclick="downloadFavicon('svg', 256)">Download SVG Size</button>
+        </div>
+        
+        <div class="canvas-item">
+            <p>180x180 (Apple Touch)</p>
+            <canvas id="canvas-180" width="180" height="180"></canvas>
+            <br>
+            <button class="download-btn" onclick="downloadFavicon('180', 180)">Download 180x180</button>
+        </div>
+        
+        <div class="canvas-item">
+            <p>32x32 (Standard)</p>
+            <canvas id="canvas-32" width="32" height="32"></canvas>
+            <br>
+            <button class="download-btn" onclick="downloadFavicon('32', 32)">Download 32x32</button>
+        </div>
+        
+        <div class="canvas-item">
+            <p>16x16 (Small)</p>
+            <canvas id="canvas-16" width="16" height="16"></canvas>
+            <br>
+            <button class="download-btn" onclick="downloadFavicon('16', 16)">Download 16x16</button>
+        </div>
+    </div>
+    
+    <div class="instructions">
+        <h3>📥 How to Use Your Favicons:</h3>
+        <ol>
+            <li>Click each "Download" button above to save all 4 favicon files</li>
+            <li>Rename the downloaded files:
+                <ul>
+                    <li><code>favicon-256.png</code> → <code>favicon.svg</code> (or keep as PNG)</li>
+                    <li><code>favicon-180.png</code> → <code>apple-touch-icon.png</code></li>
+                    <li><code>favicon-32.png</code> → <code>favicon-32x32.png</code></li>
+                    <li><code>favicon-16.png</code> → <code>favicon-16x16.png</code></li>
+                </ul>
+            </li>
+            <li>Move all files to your project root: <code>VS Port/</code></li>
+            <li>Refresh your portfolio - favicon will appear! 🎉</li>
+        </ol>
+    </div>
+
+    <script>
+        // Neon Glow Drawing Function
+        function drawNeonGlow(canvas, color1, color2, textColor) {
+            const ctx = canvas.getContext('2d');
+            const w = canvas.width;
+            const h = canvas.height;
+            
+            // Scale font size based on canvas size
+            const fontSize = Math.floor(w * 0.625); // 62.5% of canvas width
+            
+            // Dark background
+            ctx.fillStyle = '#0a0a0a';
+            ctx.fillRect(0, 0, w, h);
+            
+            // Glow circles (scaled)
+            const baseRadius = w / 5.12; // Scale from 256px base
+            const radiusMultiplier = w / 256;
+            
+            for(let i = 0; i < 3; i++) {
+                const gradient = ctx.createRadialGradient(
+                    w/2, h/2, baseRadius,
+                    w/2, h/2, (150 + i * 30) * radiusMultiplier
+                );
+                gradient.addColorStop(0, color1 + '40');
+                gradient.addColorStop(0.5, color2 + '20');
+                gradient.addColorStop(1, 'transparent');
+                ctx.fillStyle = gradient;
+                ctx.beginPath();
+                ctx.arc(w/2, h/2, (150 + i * 30) * radiusMultiplier, 0, Math.PI * 2);
+                ctx.fill();
+            }
+            
+            // Multiple glow layers for letter
+            for(let i = 5; i >= 0; i--) {
+                ctx.shadowColor = color1;
+                ctx.shadowBlur = (30 + i * 10) * (w / 256);
+                ctx.fillStyle = i === 0 ? textColor : color1;
+                ctx.font = `bold ${fontSize}px Arial, sans-serif`;
+                ctx.textAlign = 'center';
+                ctx.textBaseline = 'middle';
+                ctx.fillText('A', w/2, h/2 + (10 * radiusMultiplier));
+            }
+        }
+        
+        // Generate all favicon sizes
+        function generateFavicons() {
+            // Purple theme colors
+            const color1 = '#6A0DAD';  // Royal Purple
+            const color2 = '#D946EF';  // Magenta
+            const textColor = '#ffffff'; // White
+            
+            // Draw each size
+            const sizes = [
+                { id: 'canvas-svg', size: 256 },
+                { id: 'canvas-180', size: 180 },
+                { id: 'canvas-32', size: 32 },
+                { id: 'canvas-16', size: 16 }
+            ];
+            
+            sizes.forEach(({ id, size }) => {
+                const canvas = document.getElementById(id);
+                drawNeonGlow(canvas, color1, color2, textColor);
+            });
+            
+            console.log('✅ All favicons generated!');
+        }
+        
+        // Download function
+        function downloadFavicon(size, dimension) {
+            const canvas = document.getElementById(`canvas-${size}`);
+            const link = document.createElement('a');
+            link.download = `favicon-${dimension}.png`;
+            link.href = canvas.toDataURL('image/png');
+            link.click();
+            console.log(`✅ Downloaded favicon-${dimension}.png`);
+        }
+        
+        // Generate on load
+        window.addEventListener('load', () => {
+            generateFavicons();
+            console.log('🎨 Favicon generator ready!');
+        });
+    </script>
+</body>
+</html>

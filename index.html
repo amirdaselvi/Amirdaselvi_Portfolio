@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AmirdaSelvi C.S | Data Analyst</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="assets/favicon.pn">
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <!-- EmailJS -->
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+</head>
+<body class="dark-mode">
+    <!-- Navigation -->
+    <nav class="nav">
+        <div class="container nav-container">
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#internships">Internships</a></li>
+                <li><a href="#education">Education</a></li>
+                <li><a href="#conferences">Conferences</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="nav-actions">
+                <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+                    <i class="fas fa-moon"></i>
+                </button>
+                <a href="assets/C.S.AMIRDASELVI-RESUME.pdf" download="AmirdaSelvi_Resume.pdf" class="btn-download">
+                    <i class="fas fa-download"></i> Resume
+                </a>
+                <button class="mobile-toggle" id="mobileToggle">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-particles" id="particles-js"></div>
+        <div class="container">
+            <div class="hero-content hero-pattern">
+                <div class="hero-text">
+                    <h1 class="hero-greeting">I'm a <span id="typed-text"></span></h1>
+                    <p class="hero-description">Results-driven Computer Science Engineering student with a <strong>9.79 CGPA</strong>, specializing in Big Data Analytics. Passionate about building data-driven, scalable solutions using AI, machine learning, and modern web technologies.</p>
+                    <div class="hero-actions">
+                        <a href="#projects" class="hero-primary-button">View My Work <i class="fas fa-arrow-right"></i></a>
+                        <a href="#contact" class="hero-secondary-button">Get In Touch</a>
+                    </div>
+                    <div class="hero-stats">
+                        <div class="hero-stat">
+                            <strong>3+</strong>
+                            <span>PROJECTS</span>
+                        </div>
+                        <div class="hero-stat">
+                            <strong>9.79</strong>
+                            <span>CGPA</span>
+                        </div>
+                        <div class="hero-stat">
+                            <strong>3+</strong>
+                            <span>INTERNSHIPS</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="hero-profile-card">
+                    <div class="profile-photo-wrap">
+                        <img src="assets/Amirdaselvi_photo.png" alt="AmirdaSelvi C.S" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                        <div class="profile-fallback" aria-label="Profile photo placeholder">
+                            <i class="fas fa-user"></i>
+                        </div>
+                    </div>
+                    <h2 class="hero-name">AmirdaSelvi C.S</h2>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="section-title">
+                <span>About Me</span>
+                <div class="title-underline"></div>
+            </div>
+            <div class="about-content fade-in">
+                <div class="about-text">
+                    <p>Passionate Computer Science Engineering student specializing in Big Data Analytics with experience in AI/ML, Web Development, and Backend Engineering. Skilled in Python, FastAPI, LangChain, Machine Learning, NLP, and modern web technologies, with hands-on project experience in intelligent and data-driven systems.
+
+Completed 3 internships and actively participated in hackathons including Smart India Hackathon. Interested in Artificial Intelligence, Generative AI, RAG systems, scalable backend architectures, and building innovative AI-powered solutions..</p>
+                </div>
+                <div class="about-stats">
+                    <div class="stat">
+                        <i class="fas fa-code"></i>
+                        <h3>Big Data</h3>
+                        <p>Analysis & Processing</p>
+                    </div>
+                    <div class="stat">
+                        <i class="fas fa-brain"></i>
+                        <h3>Machine Learning</h3>
+                        <p>Model Development</p>
+                    </div>
+                    <div class="stat">
+                        <i class="fas fa-database"></i>
+                        <h3>Data Science</h3>
+                        <p>Insights & Solutions</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills">
+        <div class="container">
+            <h2 class="section-title">
+                <span>Skills <strong>&amp; Tech Stack</strong></span>
+                <div class="title-underline"></div>
+            </h2>
+            <div class="skills-wrapper">
+                <article class="skill-card">
+                    <h3 class="skill-card-title"><i class="fas fa-code"></i> Programming</h3>
+                    <div class="skill-tags">
+                        <span>Python</span>
+                        <span>OOPs</span>
+                        <span>DSA</span>
+                        <span>SQL</span>
+                        <span>JavaScript</span>
+                    </div>
+                </article>
+
+                <article class="skill-card">
+                    <h3 class="skill-card-title"><i class="fas fa-brain"></i> AI &amp; Analytics</h3>
+                    <div class="skill-tags">
+                        <span>Machine Learning</span>
+                        <span>Deep Learning</span>
+                        <span>PySpark</span>
+                        <span>Databricks</span>
+                        <span>NLP</span>
+                        <span>RAG</span>
+                        <span>Power BI</span>
+                        <span>Matplotlib</span>
+                    </div>
+                </article>
+
+                <article class="skill-card">
+                    <h3 class="skill-card-title"><i class="fas fa-layer-group"></i> Web &amp; Backend</h3>
+                    <div class="skill-tags">
+                        <span>FastAPI</span>
+                        <span>Flask</span>
+                        <span>React</span>
+                        <span>HTML</span>
+                        <span>CSS</span>
+                        <span>Bootstrap</span>
+                        <span>REST API</span>
+                    </div>
+                </article>
+
+                <article class="skill-card">
+                    <h3 class="skill-card-title"><i class="fas fa-toolbox"></i> Tools &amp; Platforms</h3>
+                    <div class="skill-tags">
+                        <span>MySQL</span>
+                        <span>MongoDB</span>
+                        <span>Docker</span>
+                        <span>GitHub</span>
+                        <span>Excel</span>
+                        <span>LangChain</span>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+        <div class="container">
+            <div class="section-title">
+                <span>Featured Projects</span>
+                <div class="title-underline"></div>
+            </div>
+            <div class="projects-container">
+                <!-- Project 1 - Video Right -->
+                <div class="project-item" id="project1">
+                    <div class="project-details">
+                        <div class="project-number">PROJECT 01</div>
+                        <h3>Music Genre Prediction</h3>
+                        <p class="project-description">Developed an advanced machine learning model to accurately predict music genres based on audio features and patterns using sophisticated classification algorithms and deep learning techniques.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">TensorFlow</span>
+                            <span class="tech-tag">Scikit-learn</span>
+                            <span class="tech-tag">Audio Processing</span>
+                            <span class="tech-tag">Deep Learning</span>
+                        </div>
+                      
+                    </div>
+                    <div class="project-video">
+                        <video controls autoplay muted loop playsinline>
+                            <source src="assets/videos/project1.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                </div>
+
+                <!-- Project 2 - Video Left (Reverse) -->
+                <div class="project-item reverse" id="project2">
+                    <div class="project-video">
+                        <video controls autoplay muted loop playsinline>
+                            <source src="assets/videos/Retail Growth Intelligence - Google Chrome 2026-02-22 14-35-50.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                    <div class="project-details">
+                        <div class="project-number">PROJECT 02</div>
+                        <h3>RETAIL GROWTH INTELLIGENCE</h3>
+                        <p class="project-description">Developed an intelligent retail analytics solution to drive growth and optimize business performance through data-driven insights and predictive modeling.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">Pandas</span>
+                            <span class="tech-tag">Machine Learning</span>
+                            <span class="tech-tag">Regression Analysis</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/amirdaselvi/RETAIL-GROWTH-INTELLIGENCE" target="_blank" class="project-link">
+                                <i class="fab fa-github"></i> View Code
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 3 - Video Right 
+                <div class="project-item" id="project3">
+                    <div class="project-details">
+                        <div class="project-number">PROJECT 03</div>
+                        <h3>Elara AI - Learn Smarter</h3>
+                        <p class="project-description">Designed and developed a 5-page interactive web application integrating machine learning for student performance analysis, progress tracking, and intelligent tutor recommendations.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">API Integration</span>
+                            <span class="tech-tag">Machine Learning</span>
+                            <span class="tech-tag">JavaScript</span>
+                            <span class="tech-tag">Flask</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/amirdaselvi/ELARA--PERSONALISED-AI-TUTOR-" target="_blank" class="project-link">
+                                <i class="fab fa-github"></i> View Code
+                            </a>
+                        </div>
+                    </div>
+                    <div class="project-video">
+                        <video controls autoplay muted loop playsinline>
+                            <source src="assets/videos/project3.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                </div>-->
+
+                <!-- Project 4 - Video Left (Reverse) -->
+                <div class="project-item reverse" id="project4">
+                    <div class="project-video">
+                        <video controls autoplay muted loop playsinline>
+                            <source src="assets/videos/spotifydashboard 2025-10-04 12-20-10.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                    <div class="project-details">
+                        <div class="project-number">PROJECT 03</div>
+                        <h3>Spotify Dashboard</h3>
+                        <p class="project-description">Developed an interactive Spotify Music Insights Dashboard using Power BI to analyze track popularity, artist performance, and genre trends through dynamic visualizations, DAX measures, and time-based KPIs.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Power BI</span>
+                            <span class="tech-tag">MS EXCEL</span>
+                        </div>
+                    
+                    </div>
+                </div>
+
+                
+            </div>
+        </div>
+    </section>
+
+    <!-- Internships Section -->
+    <section id="internships" class="internships">
+        <div class="container">
+            <div class="section-title">
+                <span>Career Journey</span>
+                <div class="title-underline"></div>
+            </div>
+            <div class="timeline-container">
+                <!-- Timeline Line -->
+                <div class="timeline-line"></div>
+                
+                <!-- Latest Internship (Top) -->
+                <div class="timeline-item" id="intern1">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <span class="timeline-date">Jan 2026 - Mar 2026</span>
+                        <h3>AI Engineer Intern</h3>
+                        <p class="timeline-role">Upstride</p>
+                        <p class="timeline-description">Worked as a part-time AI Engineer & Backend Developer at Upstride, building scalable APIs for the APEX project, containerizing services with Docker, and integrating AI components to improve data flow efficiency by 30%.</p>
+                        <div class="timeline-skills">
+                            <span class="timeline-skill">Python</span>
+                            <span class="timeline-skill">Docker</span>
+                            <span class="timeline-skill">API Design</span>
+                            <span class="timeline-skill">AI</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Second Internship -->
+                <div class="timeline-item" id="intern2">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <span class="timeline-date">Aug 2025 - Sept 2025</span>
+                        <h3>Machine Learning Intern</h3>
+                        <p class="timeline-role">Izeon Innovative IT training Company</p>
+                        <p class="timeline-description">Gained hands-on experience in Machine learning and deep learning. Collaborated with mentors and team members to apply ML solutions in real-time case studies and projects.</p>
+                        <div class="timeline-skills">
+                            <span class="timeline-skill">Pandas</span>
+                            <span class="timeline-skill">Python</span>
+                            <span class="timeline-skill">Machine Learning</span>
+                            <span class="timeline-skill">Regression Analysis</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Third Internship -->
+                <div class="timeline-item" id="intern3">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <span class="timeline-date">Feb 2025 - March 2025</span>
+                        <h3>Frontend Web Development Intern</h3>
+                        <p class="timeline-role">Izeon Innovative IT training Company</p>
+                        <p class="timeline-description">Worked on developing responsive web applications using HTML, CSS, and JavaScript. Collaborated with designers to implement user-friendly interfaces and optimize web performance.</p>
+                        <div class="timeline-skills">
+                            <span class="timeline-skill">HTML5</span>
+                            <span class="timeline-skill">CSS3</span>
+                            <span class="timeline-skill">JavaScript</span>
+                            <span class="timeline-skill">Bootstrap</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Extra Curricular Activities -->
+                <div class="timeline-item" id="experience1">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <span class="timeline-date">Sep 2025</span>
+                        <h3>PR Head at TechPro Students Club</h3>
+                        <p class="timeline-role">TechPro Student Club - SRMIST</p>
+                        <p class="timeline-description">Led technical initiatives, organized engineering events, and coordinated inter-department technical activities as the Public Relations Head.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education" class="education">
+        <div class="container">
+            <div class="section-title">
+                <span>Academic Background</span>
+                <div class="title-underline"></div>
+            </div>
+            <div class="education-list">
+                <article class="education-item">
+                    <div class="education-icon" aria-hidden="true"><i class="fas fa-book-open"></i></div>
+                    <div class="education-details">
+                        <h3>B.Tech. CSE | Big Data Analytics</h3>
+                        <p>SRM Institute of Science and Technology, Ramapuram - Chennai, India</p>
+                        <div class="education-meta">
+                            <span>2023 - 2027 (Expected)</span>
+                            <strong>CGPA: 9.79/10</strong>
+                        </div>
+                    </div>
+                </article>
+                <article class="education-item">
+                    <div class="education-icon" aria-hidden="true"><i class="fas fa-graduation-cap"></i></div>
+                    <div class="education-details">
+                        <h3>Class XII</h3>
+                        <p>SREE NARAYANA MISSION SENIOR SEC SCHOOL, West Mambalam, Chennai</p>
+                        <div class="education-meta">
+                            <span>2022 - 2023</span>
+                            <strong>Percentage: 87%</strong>
+                        </div>
+                    </div>
+                </article>
+                <article class="education-item">
+                    <div class="education-icon" aria-hidden="true"><i class="fas fa-school"></i></div>
+                    <div class="education-details">
+                        <h3>Class X</h3>
+                        <p>SREE NARAYANA MISSION SENIOR SEC SCHOOL, West Mambalam, Chennai</p>
+                        <div class="education-meta">
+                            <span>2020 - 2021</span>
+                            <strong>Percentage: 94%</strong>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Conferences and Workshops Section -->
+    <section id="conferences" class="conferences">
+        <div class="container">
+            <div class="section-title">
+                <span>Conferences &amp; Workshops</span>
+                <div class="title-underline"></div>
+            </div>
+            <article class="conference-card">
+                <div class="conference-header">
+                    <h3>International Conference on Emerging Computing Technologies (ICECT 2026)</h3>
+                    <span class="conference-date">Mar 2026</span>
+                </div>
+                <p class="conference-organization">Velammal Engineering College</p>
+                <ul class="conference-highlights">
+                    <li>Presented research paper on “Regional Forecast Driven E-Commerce Growth Intelligence”.</li>
+                    <li>Developed an AI-based system using Machine Learning, Demand Forecasting, and Sentiment Analysis.</li>
+                    <li>Applied Random Forest algorithm for prediction and Power BI for data visualization.</li>
+                    <li>Demonstrated skills in data analytics, predictive modeling, and research communication.</li>
+                </ul>
+            </article>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="section-title">
+                <span>Let's Connect</span>
+                <div class="title-underline"></div>
+            </div>
+            <div class="contact-content">
+                <p class="contact-description">Feel free to reach out for collaborations, opportunities, or just to say hello!</p>
+                <div class="social-icons">
+                    <a href="mailto:csamirda@gmail.com" class="social-icon" aria-label="Email">
+                        <i class="fas fa-envelope"></i>
+                        <span>Email</span>
+                    </a>
+                    <a href="https://linkedin.com/in/amirdaselvi-c-s-373222296/" target="_blank" class="social-icon" aria-label="LinkedIn">
+                        <i class="fab fa-linkedin"></i>
+                        <span>LinkedIn</span>
+                    </a>
+                    <a href="https://github.com/amirdaselvi" target="_blank" class="social-icon" aria-label="GitHub">
+                        <i class="fab fa-github"></i>
+                        <span>GitHub</span>
+                    </a>
+                    <a href="https://twitter.com/yourprofile" target="_blank" class="social-icon" aria-label="Twitter">
+                        <i class="fab fa-twitter"></i>
+                        <span>Twitter</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <p class="copyright">&copy; 2025 AmirdaSelvi C.S. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
