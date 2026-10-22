@@ -95,10 +95,8 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 const typed = new Typed('#typed-text', {
     strings: [
         'Big Data Analyst',
-        'Machine Learning',
-        'Data Analytics',
-        'Python Programming',
-        'SQL & Databases'
+        'Machine Learning Engineer',
+        'Data Analyst',
     ],
     typeSpeed: 80,
     backSpeed: 40,
